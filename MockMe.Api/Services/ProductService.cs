@@ -10,7 +10,6 @@ namespace MockMe.Api.Services
     public interface IProductService
     {
         Task<IEnumerable<Product>> GetAll();
-        Task<Product> Get(int id);
     }
 
     public class ProductService : IProductService
@@ -36,11 +35,6 @@ namespace MockMe.Api.Services
             }
 
             return await Task.FromResult(products);
-        }
-
-        public Task<Product> Get(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 }
