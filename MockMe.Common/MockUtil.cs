@@ -1,8 +1,6 @@
 ﻿using Bogus;
 using MockMe.Model;
-using System;
 using System.Collections.Generic;
-using System.Globalization;
 
 namespace MockMe.Common
 {

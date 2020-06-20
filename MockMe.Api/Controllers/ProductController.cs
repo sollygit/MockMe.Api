@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace MockMe.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
