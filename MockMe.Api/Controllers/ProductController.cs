@@ -16,9 +16,9 @@ namespace MockMe.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery(Name = "_limit")] int limit)
         {
-            var items = await _productService.GetAll();
+            var items = await _productService.GetAll(limit);
             return new OkObjectResult(items);
         }
     }

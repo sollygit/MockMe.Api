@@ -9,7 +9,7 @@ namespace MockMe.Api.Services
 {
     public interface IProductService
     {
-        Task<IEnumerable<Product>> GetAll();
+        Task<IEnumerable<Product>> GetAll(int count);
     }
 
     public class ProductService : IProductService
@@ -21,13 +21,13 @@ namespace MockMe.Api.Services
             _logger = logger;
         }
 
-        public async Task<IEnumerable<Product>> GetAll()
+        public async Task<IEnumerable<Product>> GetAll(int count)
         {
             var products = new List<Product>();
 
             try
             {
-                products = MockUtil.Products(10);
+                products = MockUtil.Products(count);
             }
             catch (Exception ex)
             {
